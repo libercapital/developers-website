@@ -39,7 +39,8 @@ jobs:
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
-        path: "build/"
+        with:
+          path: "build/"
 
   deploy:
     environment:
