@@ -2,7 +2,6 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -18,7 +17,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
+  organizationName: 'libercapital', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -42,7 +41,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/libercapital/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
@@ -52,7 +51,10 @@ const config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [
+            require.resolve('./src/css/fonts.css'),
+            require.resolve('./src/css/custom.css'),
+          ],
         },
       }),
     ],
@@ -64,9 +66,8 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Liber Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -74,11 +75,37 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Guides',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            type: 'dropdown',
+            label: 'APIs',
+            position: 'left',
+            items: [
+              {
+                label: 'Liber Connect - Autenticação',
+                to: 'apis/connect-auth',
+              },
+              {
+                label: 'Liber Connect - Autenticação',
+                to: 'apis/connect-auth',
+              },
+              {
+                label: 'Liber Connect - Sacados',
+                to: 'apis/connect-buyers',
+              },
+              {
+                label: 'Liber Connect - Investidores',
+                to: 'apis/connect-funders',
+              },
+              {
+                label: 'Liber Connect - Webhooks',
+                to: 'api-connect-webhooks',
+              },
+            ],
+          },
+          {
+            href: 'https://github.com/libercapital',
             label: 'GitHub',
             position: 'right',
           },
@@ -131,7 +158,11 @@ const config = {
       },
       prism: {
         theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+      },
+      colorMode: {
+        disableSwitch: true,
+        defaultMode: 'light',
+        respectPrefersColorScheme: false,
       },
     }),
 };
