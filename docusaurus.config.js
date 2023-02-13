@@ -80,10 +80,6 @@ const config = {
                 to: 'apis/connect-auth',
               },
               {
-                label: 'Liber Connect - Autenticação',
-                to: 'apis/connect-auth',
-              },
-              {
                 label: 'Liber Connect - Sacados',
                 to: 'apis/connect-buyers',
               },
@@ -93,7 +89,7 @@ const config = {
               },
               {
                 label: 'Liber Connect - Webhooks',
-                to: 'api-connect-webhooks',
+                to: 'apis/connect-webhooks',
               },
             ],
           },
