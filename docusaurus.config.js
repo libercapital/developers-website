@@ -10,7 +10,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'hhttps://libercapital.com.br/',
+  url: 'https://libercapital.com.br/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/developers-website/',
@@ -38,10 +38,6 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/libercapital/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: [
@@ -104,11 +100,15 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Contato',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'contato@libercapital.com.br',
+                href: 'mailto:contato@libercapital.com.br',
+              },
+              {
+                label: '+55 (11) 4858-1265',
+                href: 'tel:551148581265',
               },
             ],
           },
@@ -116,30 +116,30 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/company/liber-capital/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Instagram',
+                href: 'https://www.instagram.com/libercapital/',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Youtube',
+                href: 'https://www.youtube.com/channel/UCyAAazejyw5VTjjbd4Kf3bw',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Documentos',
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/libercapital',
+                label: 'Política de Privacidade',
+                href: 'https://libercapital.com.br/politica-de-privacidade/',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Liber Capital.`,
+        copyright: `© ${new Date().getFullYear()} Liber Capital S/A - Todos os direitos reservados | CNPJ: 26.961.015/0001-00`,
       },
       prism: {
         theme: lightCodeTheme,
